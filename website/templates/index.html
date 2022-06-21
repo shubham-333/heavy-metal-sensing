@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Heavy-Metal-Detection</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" />
     <link rel="shortcut icon" href="" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -74,6 +74,6 @@
       </div>
     </div>
 
-    <script type="module" src="/index.js"></script>
+    <script type="module" src="{{ url_for('static', filename='js/index.js')}}"></script>
   </body>
 </html>
