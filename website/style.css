@@ -1,0 +1,123 @@
+body {
+  background: #fff;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+}
+
+input,
+button {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+}
+
+.main-div {
+  width: 25%;
+  margin: 0px auto;
+  margin-top: 150px;
+  padding: 20px;
+  display: none;
+}
+
+.loggedin-div {
+  width: 80%;
+  margin: 0px auto;
+  margin-top: 50px;
+  padding: 20px;
+  display: none;
+}
+
+#login_div h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.main-div input,
+.user_div input {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  padding: 15px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  box-sizing: border-box;
+}
+
+.main-div input:focus {
+  border: 1px solid #777;
+}
+
+.main-div button,
+.loggedin-div button {
+  background: #5d8ffc;
+  color: #fff;
+  border: 1px solid #5d8ffc;
+  border-radius: 5px;
+
+  padding: 15px;
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+.main-div button {
+  width: 100%;
+}
+.loggedin-div button {
+  width: 200px;
+}
+
+.main-div button:hover,
+.loggedin-div button:hover {
+  background: #fff;
+  color: #5d8ffc;
+  border: 1px solid #5d8ffc;
+  cursor: pointer;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item-subtitle {
+  width: 20%;
+  text-align: center;
+  padding: 2px;
+  outline: 1px solid #ccc;
+}
+.list-item-subtitle:nth-of-type(1) {
+  background: #5d8ffc;
+  color: #fff;
+}
+.heading {
+  font-weight: 600;
+}
+.input-field {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+}
+.input-field label {
+  padding-bottom: 10px;
+}
+.add-data-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}

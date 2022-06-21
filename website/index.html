@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heavy-Metal-Detection</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <form id="login_div" class="main-div">
+      <h3>Heavy Metal Detection</h3>
+      <input type="email" placeholder="Email..." id="email_field" />
+      <input type="password" placeholder="Password..." id="password_field" />
+      <button id="login-btn">Login to Account</button>
+      <button id="register-btn">Create a new Account</button>
+    </form>
+
+    <div id="user_div" class="loggedin-div">
+      <!-- <h3>Welcome User</h3> -->
+      <h3 id="user_para"></h3>
+      <div class="main-list" id="list_div"></div>
+
+      <h3>Add new data</h3>
+      <div class="add-data-container">
+        <div>
+          <p class="input-field">
+            <label for="trial-no">Date Time</label>
+            <input type="text" placeholder="Trail Number" id="trial-no" />
+          </p>
+          <p class="input-field">
+            <label for="trial-no">Cadmium</label>
+            <input
+              type="text"
+              placeholder="Conc of Cadmium"
+              id="input-Cadmium"
+            />
+          </p>
+          <p class="input-field">
+            <label for="trial-no">Lead</label>
+            <input type="text" placeholder="Conc of Lead" id="input-Lead" />
+          </p>
+          <p class="input-field">
+            <label for="trial-no">Copper</label>
+            <input type="text" placeholder="Conc of Copper" id="input-Copper" />
+          </p>
+          <p class="input-field">
+            <label for="trial-no">Mercury</label>
+            <input
+              type="text"
+              placeholder="Conc of Mercury"
+              id="input-Mercury"
+            />
+          </p>
+        </div>
+        <div>
+          <button id="add-btn">Add Data</button>
+          <button id="logout-btn">Logout</button>
+        </div>
+      </div>
+      <!-- <button id="verify-btn">Verify Account</button> -->
+      <div class="mainDiv" align="right">
+        <h1 align="left">Firebase File Upload</h1>
+        <progress id="uploader" value="0" max="100">0%</progress>
+        <input type="file" id="fileButton" value="upload"/>
+      </div>
+    </div>
+
+    <script type="module" src="/index.js"></script>
+  </body>
+</html>
