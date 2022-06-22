@@ -164,6 +164,11 @@ document.querySelector("#add-btn").addEventListener("click", (e) => {
   //};
 });
 
+function uploadData() {
+  if("{{uploadData[0]==True}}" == "True"){
+    console.log(uploadData);
+  }
+}
 
   
 
