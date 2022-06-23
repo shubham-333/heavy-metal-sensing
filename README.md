@@ -10,11 +10,24 @@ virtualenv venv
 venv\scripts\activate
 ```
 
-## Install requirements in venv
-`pip install -r requrements.txt`
+## For website
 
-## Run Locally
-`cd website`
-`python app.py`
-  
-  
+### Install requirements in venv
+```
+cd website
+pip install -r requirements.txt
+```
+### Run Locally
+```
+python app.py
+```  
+
+## For Application
+
+### To compile the Heavy_metal_Detection.py to an exe file
+```
+cd app
+pip install -r requirements.txt
+pip install pyinstaller
+pyinstaller.exe --onefile --hidden-import tkinter --icon=icon.ico --windowed Heavy_Metal_Detection.py
+```
