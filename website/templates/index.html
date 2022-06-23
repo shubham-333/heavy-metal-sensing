@@ -16,9 +16,9 @@
   </head>
 
   <body>
-    <form id="login_div" class="main-div" method="post">
+    <form id="login_div" class="main-div" method="get">
       <h3>Heavy Metal Detection</h3>
-      <input type="email" placeholder="Email..." id="email_field" />
+      <input type="email" name="email" placeholder="Email..." id="email_field" />
       <input type="password" placeholder="Password..." id="password_field" />
       <button id="login-btn">Login to Account</button>
       <button id="register-btn">Create a new Account</button>
@@ -77,11 +77,7 @@
         </form>
       </div>
 
-      <div class="mainDiv" align="right">
-        <h1 align="left">Firebase File Upload</h1>
-        <progress id="uploader" value="0" max="100">0%</progress>
-        <input type="file" id="fileButton" value="upload"/>       
-      </div>
+      
 
     </div>
 

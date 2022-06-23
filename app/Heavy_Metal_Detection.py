@@ -1,4 +1,4 @@
-# To compile in exe use
+# To compile in .exe use
 #pyinstaller.exe --onefile --hidden-import tkinter --icon=icon.ico --windowed Heavy_Metal_Detection.py
 from tkinter import *
 from tkinter import messagebox
@@ -108,15 +108,8 @@ def upload_to_firebase(ConcCd,ConcPb,ConcCu,ConcHg):
         'appId': '1:414213176253:web:d3e2db3e60f529de11b0d4',
     };
     userName=name_var.get()
-    # trialNo=trialno_var.get()
-    # userName = "shubham"
-    # trialNo = 7
-    # locale.setlocale(
-    # category=locale.LC_ALL,
-    # locale="German"  # Note: do not use "de_DE" as it doesn't work
-    # )
     dateTime = datetime.now().strftime("%d-%m-%Y, %H:%M:%S")
-    # dateTime = dateTime.strftime("%d-%m-%Y, ")+ dateTime.strftime("%H").replace('0','')+dateTime.strftime(":%M:%S") # %H for 24 hr format 
+    
     firebase = pyrebase.initialize_app(firebaseConfig)
     db = firebase.database()
     data = {
@@ -131,19 +124,6 @@ def upload_to_firebase(ConcCd,ConcPb,ConcCu,ConcHg):
     messagebox.showinfo("Uploaded","Uploaded to Firebase")
     print("Uploaded to Firebase")
 
-
-    # db = firestore.client()
-    # # doc_ref = db.collection("users").document("aturing")
-    # doc_ref = db.collection(u'users').document(u'aturing')
-    # doc_ref.set({
-    #     u'first': u'Alan',
-    #     u'middle': u'Mathison',
-    #     u'last': u'Turing',
-    #     u'born': 1912
-    # })
-    # await doc_ref.set(
-    #     {"first": "Alan", "middle": "Mathison", "last": "Turing", "born": 1912}
-    # )
 
 
 

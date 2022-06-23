@@ -14,6 +14,10 @@ class App:
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
+    if request.method == 'get':
+        username = request.form['email']
+        print(username)
+        # return render_template('index.html', uploadData = ["True", ConcCd, ConcPb, ConcCu, ConcHg])
     if request.method == 'POST':
         file = request.files['csvfile']
         if not os.path.isdir('static'):
