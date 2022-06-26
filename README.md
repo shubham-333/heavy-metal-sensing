@@ -12,11 +12,6 @@ venv\scripts\activate
 
 ## For website
 
-### Install requirements in venv
-```
-cd website
-pip install -r requirements.txt
-```
 ### Add your web app's Firebase configuration
 ```
 const firebaseConfig = {
@@ -28,6 +23,11 @@ const firebaseConfig = {
   messagingSenderId: "",
   appId: ""
 };
+```
+### Install requirements in venv
+```
+cd website
+pip install -r requirements.txt
 ```
 
 ### Run Locally
