@@ -25,17 +25,26 @@
     </form>
 
     <div id="user_div" class="loggedin-div">
-      <!-- <h3>Welcome User</h3> -->
       <h3 id="user_para"></h3>
       <div class="main-list" id="list_div"></div>
 
+      <span>
       <h3>Add new data</h3>
+      <div class ="upload-data-container">
+        <form class="" action="" method="post" enctype="multipart/form-data">
+          <p class="input-field">
+            <input type="text" name = "username" placeholder="User Name" value="">
+          </p>
+          <p class="input-field">
+          <input type="file" name = "csvfile" value="Select File">
+          </p>
+          <p class="input-field">
+          <input type="submit" name = "" value="Upload File">  
+          </p>
+        </form>
+      </div>
       <div class="add-data-container">
         <div>
-          <p class="input-field">
-            <label for="trial-no">Date Time</label>
-            <input type="text" placeholder="Trail Number" id="trial-no" />
-          </p>
           <p class="input-field">
             <label for="trial-no">Cadmium</label>
             <input
@@ -66,19 +75,6 @@
           <button id="logout-btn">Logout</button>
         </div>
       </div>
-      <!-- <button id="verify-btn">Verify Account</button> -->
-
-      <div class ="">
-        <form class="" action="" method="post" enctype="multipart/form-data">
-          <input type="file" name = "csvfile" value="">
-          <input type="text" name = "username" value="">
-          </input>
-          <input type="submit" name = "" value="Submit">  
-        </form>
-      </div>
-
-      
-
     </div>
 
     <script type="module" src="{{ url_for('static', filename='js/index.js')}}"></script>

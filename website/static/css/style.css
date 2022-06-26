@@ -114,7 +114,8 @@ button {
 .input-field label {
   padding-bottom: 10px;
 }
-.add-data-container {
+.add-data-container,
+.upload-data-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -54,28 +54,20 @@ def index():
         ConcHg = 276.58*HgY+ 89.613
         print(f'Concentration of Cadmium is {ConcCd} \nConcentration of Lead is {ConcPb} \nConcentration of Copper is {ConcCu} \nConcentration of Mercury is {ConcHg}\n')
         print("Uploading to Firebase")
+
         firebaseConfig = {
-            'apiKey': "AIzaSyAiLTBylHxOyt_UKk7idl93INTq7akZvJA",
-            'authDomain': "heavy-metal-detection-f41f6.firebaseapp.com",
-            'databaseURL': "https://heavy-metal-detection-f41f6-default-rtdb.firebaseio.com",
-            'projectId': "heavy-metal-detection-f41f6",
-            'storageBucket': "heavy-metal-detection-f41f6.appspot.com",
-            'messagingSenderId': "414213176253",
-            'appId': '1:414213176253:web:d3e2db3e60f529de11b0d4',
+            'apiKey': "",
+            'authDomain': "",
+            'databaseURL': "",
+            'projectId': "",
+            'storageBucket': "",
+            'messagingSenderId': "",
+            'appId': '',
         };
-        # userName="shubham22"#name_var.get()
-        # userName = request.username['csvfile']
+
         result = request.form
         userName = result['username']
-        # trialNo=trialno_var.get()
-        # userName = "shubham"
-        # trialNo = 7
-        # locale.setlocale(
-        # category=locale.LC_ALL,
-        # locale="German"  # Note: do not use "de_DE" as it doesn't work
-        # )
         dateTime = datetime.now().strftime("%d-%m-%Y, %H:%M:%S")
-        # dateTime = dateTime.strftime("%d-%m-%Y, ")+ dateTime.strftime("%H").replace('0','')+dateTime.strftime(":%M:%S") # %H for 24 hr format 
         firebase = pyrebase.initialize_app(firebaseConfig)
         db = firebase.database()
         data = {
@@ -87,7 +79,6 @@ def index():
         }
         db.child("users").child(userName).child(dateTime).set(data)
 
-        #messagebox.showinfo("Uploaded","Uploaded to Firebase")
         print("Uploaded to Firebase")
 
         return render_template('index.html', uploadData = ["True", ConcCd, ConcPb, ConcCu, ConcHg])
