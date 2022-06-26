@@ -17,6 +17,19 @@ venv\scripts\activate
 cd website
 pip install -r requirements.txt
 ```
+### Add your web app's Firebase configuration
+```
+const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+```
+
 ### Run Locally
 ```
 python app.py
